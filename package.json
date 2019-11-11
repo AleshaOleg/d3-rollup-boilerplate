@@ -1,0 +1,23 @@
+{
+  "name": "d3-rollup-boilerplate",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "git@github.com:AleshaOleg/d3-rollup-boilerplate.git",
+  "author": "Oleh Aloshkin <olegaleshkin@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "d3": "^5.12.0"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "rollup": "^1.26.4",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-uglify": "^6.0.3"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "build:watch": "yarn build -w",
+    "build:watch:server": "http-server & yarn build:watch",
+    "start": "yarn build:watch:server"
+  }
+}
